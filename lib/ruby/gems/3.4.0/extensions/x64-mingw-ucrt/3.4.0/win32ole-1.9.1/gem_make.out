@@ -1,0 +1,39 @@
+current directory: C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/win32ole-1.9.1/ext/win32ole
+C:/Ruby34-x64/bin/ruby.exe extconf.rb
+checking for -lole32... yes
+checking for -loleaut32... yes
+checking for &CLSID_CMultiLanguage() in -luuid... yes
+checking for -luser32... yes
+checking for -lkernel32... yes
+checking for -ladvapi32... yes
+checking for windows.h... yes
+checking for IMultiLanguage2 in mlang.h... yes
+checking for thread_specific... __thread
+checking for rb_deprecate_constant(Qnil, "")... yes
+creating Makefile
+
+current directory: C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/win32ole-1.9.1/ext/win32ole
+make DESTDIR\= sitearchdir\=./.gem.20250121-6496-ii8rip sitelibdir\=./.gem.20250121-6496-ii8rip clean
+
+current directory: C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/win32ole-1.9.1/ext/win32ole
+make DESTDIR\= sitearchdir\=./.gem.20250121-6496-ii8rip sitelibdir\=./.gem.20250121-6496-ii8rip
+generating win32ole-x64-mingw-ucrt.def
+compiling win32ole.c
+compiling win32ole_error.c
+compiling win32ole_event.c
+compiling win32ole_method.c
+compiling win32ole_param.c
+compiling win32ole_record.c
+compiling win32ole_type.c
+compiling win32ole_typelib.c
+compiling win32ole_variable.c
+compiling win32ole_variant.c
+compiling win32ole_variant_m.c
+linking shared-object win32ole.so
+
+current directory: C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/win32ole-1.9.1/ext/win32ole
+make DESTDIR\= sitearchdir\=./.gem.20250121-6496-ii8rip sitelibdir\=./.gem.20250121-6496-ii8rip install
+/usr/bin/install -c -m 0755 win32ole.so ./.gem.20250121-6496-ii8rip
+
+current directory: C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/win32ole-1.9.1/ext/win32ole
+make DESTDIR\= sitearchdir\=./.gem.20250121-6496-ii8rip sitelibdir\=./.gem.20250121-6496-ii8rip clean
