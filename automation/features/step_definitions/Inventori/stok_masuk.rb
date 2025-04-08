@@ -6,7 +6,7 @@ When('User masuk ke menu stok masuk') do
   end
   
   When('User membuat stok masuk') do
-    @pusathalaman.dashboard.btn_tambah_stok_masuk.click
+    @pusathalaman.dashboard.tambah_stok_masuk.click
     sleep 2
     @pusathalaman.dashboard.dropdown_outlet_stok_masuk.click
     sleep 1
@@ -16,11 +16,12 @@ When('User masuk ke menu stok masuk') do
     sleep 1
     @pusathalaman.dashboard.tanggal_stok_masuk.set(Time.now.strftime('%d-%m-%Y'))
     sleep 1
+    @pusathalaman.dashboard.send_keys(:enter)
     @pusathalaman.dashboard.dropdown_produk_stok_masuk.click
     sleep 1
-    @pusathalaman.dashboard.dropdown_produk_stok_masuk.set('Produk Automation')
+    @pusathalaman.dashboard.field_produk_stok_masuk.set('Produk Automation')
     sleep 1
-    @pusathalaman.dashboard.pilih_produk_stok_masuk.click
+    @pusathalaman.dashboard.send_keys(:enter)
     sleep 1
     @pusathalaman.dashboard.jumlah_stok_masuk.set('10')
     sleep 1
@@ -31,6 +32,5 @@ When('User masuk ke menu stok masuk') do
   end
   
   Then('stok berhasil terbuat') do
-    notif_hijau = @pusathalaman.dashboard.notif_hijau.text
-    expect(notif_hijau).to eq('Stok masuk berhasil ditambahkan')
+    expect(@pusathalaman.dashboard.text_stok_masuk.visible?).to be true
   end

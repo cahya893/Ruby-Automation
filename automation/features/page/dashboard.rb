@@ -106,13 +106,40 @@ class DashboardPage < SitePrism::Page
     element :dropdown_outlet_stok_masuk, '#form-stockin > div.modal-scroll-panel > div > div:nth-child(1) > div > div > button'
     element :pilih_outlet_stok_masuk, '#form-stockin > div.modal-scroll-panel > div > div:nth-child(1) > div > div > div > ul > li:nth-child(1) > a'
     element :tanggal_stok_masuk, '#form-stockin > div.modal-scroll-panel > div > div:nth-child(2) > div.col-sm-6 > div > input'
-    element :dropdown_produk_stok_masuk, '#select2-product_id-47-container'
-    element :field_produk, 'body > span > span > span.select2-search.select2-search--dropdown > input'
+    element :dropdown_produk_stok_masuk, "span[title='-Pilih Produk-']"
+    element :field_produk_stok_masuk, 'body > span > span > span.select2-search.select2-search--dropdown > input'
+    element :pilih_produk_stok_masuk, '#select2-product_id-79-results > li'
     element :jumlah_stok_masuk, '#detail-product-item > tr > td:nth-child(2) > div > input'
     element :total_harga_beli, '#detail-product-item > tr > td:nth-child(5) > div > input'
     element :simpan_stok_masuk, '#btn-submit-stockin'
-    text_berhasil_stok_masuk = 'Stok masuk berhasil ditambahkan'
+    element :stok_masuk_berhasil, '#stockin-data > tr:nth-child(1)'
 
+    #Stok Keluar
+    element :menu_stok_keluar, '#navbarBackdrop > nav > div.scroll-panel > ul > li:nth-child(5) > ul > li:nth-child(3) > a'
+    element :btn_tambah_stok_keluar, ".btn.btn-sm.btn-custom.fill-blue.open-input"
+    element :dropdown_outlet_stok_keluar, '#test > div > div > button > span.filter-option.pull-left'
+    element :pilih_outlet_stok_keluar, '#test > div > div > div > ul > li:nth-child(1) > a'
+    element :tanggal_stok_keluar, '#form-stockout > div.modal-scroll-panel > div > div:nth-child(2) > div > div > input'
+    element :dropdown_produk_stok_keluar, "span[title='-Pilih Produk-']"
+    element :field_produk_stok_keluar, 'body > span > span > span.select2-search.select2-search--dropdown > input'
+    element :jumlah_stok_keluar, '#detail-product-item > tr > td:nth-child(2) > div > input'
+    element :simpan_stok_keluar, '#btn-submit-stockout'
+    text_berhasil_stok_keluar = 'Stok keluar berhasil ditambahkan'
+
+    #transfer stok
+    element :menu_transfer_stok, '#navbarBackdrop > nav > div.scroll-panel > ul > li.dropdown.active > ul > li:nth-child(4) > a'
+    element :btn_tambah_transfer_stok, ".btn.btn-sm.btn-custom.fill-blue.open-input"
+    element :dropdown_outlet_asal, "button[title='-Pilih Outlet Asal-'] span[class='filter-option pull-left']"
+    element :pilih_outlet_asal, "div[class='btn-group bootstrap-select form-control open'] li:nth-child(1) a:nth-child(1)"
+    element :dropdown_outlet_tujuan, '#form-transfer > div.modal-scroll-panel > div > div:nth-child(3) > div > div > button > span.filter-option.pull-left'
+    element :pilih_outlet_tujuan, "div[class='btn-group bootstrap-select form-control open'] li:nth-child(2) a:nth-child(1) span:nth-child(1)"
+    element :tanggal_transfer_stok, "input[name='date']"
+    element :dropdown_produk_transfer_stok, "span[title='-Pilih Produk-']"
+    element :field_produk_transfer_stok, 'body > span > span > span.select2-search.select2-search--dropdown > input'
+    element :jumlah_transfer_stok, "input[value='0']"
+    element :btn_simpan_transfer_stok, "#btn-submit-transfer"
+    element :text_trasfer_stok, '#page-wrapper > div:nth-child(2) > div > div.col-md-6.col-xs-12.breadcrumb-wrapper > ol > li:nth-child(2)'
+    
     #bantuan
     element :php_debug_close, 'body > div.phpdebugbar > div.phpdebugbar-header > div.phpdebugbar-header-right > a.phpdebugbar-close-btn'
     element :notif_hijau, '#page-wrapper > div:nth-child(1) > div.top-notification > div > div'
